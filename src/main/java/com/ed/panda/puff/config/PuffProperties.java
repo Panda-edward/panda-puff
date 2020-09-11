@@ -15,12 +15,27 @@ public class PuffProperties {
 
     public static final String PUFF_PREFIX = "puff";
 
+    /**
+     * 是否启用内置重试task: 推荐使用统一的调度平台
+     */
+    private TaskConfig task;
+
     private ExecutorConfig globalExecutor;
 
-    private Map<Integer,ExecutorConfig> bizExecutor;
+    private Map<Integer, ExecutorConfig> bizExecutor;
 
     @Data
     public static class ExecutorConfig {
+
         private int poolSize;
     }
+
+    @Data
+    public static class TaskConfig {
+
+        private boolean enableInternal;
+
+        private int limit;
+    }
+
 }

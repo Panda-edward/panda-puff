@@ -7,8 +7,8 @@ package com.ed.panda.puff.common.enums;
 public enum TransLogStatusEnum {
 
     INIT(0, "初始化"),
-    SUCCESS(1, "成功"),
-    FAIL(2, "失败"),
+    FAIL(1, "失败"),
+    SUCCESS(2, "成功"),
     ;
 
     private int status;

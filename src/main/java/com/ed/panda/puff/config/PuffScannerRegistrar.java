@@ -14,7 +14,6 @@ import org.springframework.core.type.AnnotationMetadata;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -33,7 +32,6 @@ public class PuffScannerRegistrar implements ImportBeanDefinitionRegistrar {
         if (annotationAttributes == null || annotationAttributes.size() == 0) {
             return;
         }
-        boolean enableRetry = (Boolean) annotationAttributes.get("enableRetry");
         String[] basePackages = (String[]) annotationAttributes.get("basePackages");
         //扫描相关类
         List<Method> puffMethod = ScanUtil.scanMethodsWithAnnotation(basePackages, Puff.class);
