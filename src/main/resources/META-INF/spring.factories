@@ -1,3 +1,4 @@
 #autoconfigure,spring提供的SPI,实现外部应用整合到spring容器
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.ed.panda.puff.config.PuffAutoConfiguration
+com.ed.panda.puff.config.PuffAutoConfiguration,\
+com.ed.panda.hunting.config.HuntingAutoConfiguration
